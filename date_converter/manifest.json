@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Date Converter",
+    "version": "1.0",
+    "description": "选中时间戳或日期字符串，右键转换为日期或者时间戳",
+    "permissions": ["contextMenus", "scripting", "clipboardWrite", "clipboardRead"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+        }
+    ],
+    "icons": {
+        "128": "icon.png"
+    }
+}
