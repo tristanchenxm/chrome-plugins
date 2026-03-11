@@ -1,4 +1,5 @@
-const API_URL = 'https://ai.kreditpintar.net/sql-mapping/original-sql?hash=';
+// replace below with real API URL
+const API_URL = 'https://...';
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.type === 'fetchSql') {
