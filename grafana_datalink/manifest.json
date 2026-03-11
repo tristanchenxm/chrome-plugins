@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Grafana SQL DataLink",
+    "version": "1.0",
+    "description": "将页面上15~20位数字hash替换为对应的原始SQL",
+    "permissions": ["scripting"],
+    "host_permissions": [
+        "https://grafana-atome.advai.net/*",
+        "https://ai.kreditpintar.net/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://grafana-atome.advai.net/d/spring-boot-jdbc-hikaricp/spring-boot-jdbc-and-hikaricp*"],
+            "js": ["content.js"],
+            "run_at": "document_idle"
+        }
+    ],
+    "icons": {
+        "128": "icon.png"
+    }
+}
