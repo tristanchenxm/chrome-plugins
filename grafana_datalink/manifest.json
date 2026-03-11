@@ -5,15 +5,15 @@
     "description": "将页面上15~20位数字hash替换为对应的原始SQL",
     "permissions": ["scripting"],
     "host_permissions": [
-        "https://grafana-atome.advai.net/*",
-        "https://ai.kreditpintar.net/*"
+        "https://replace_me/*",
+        "https://replace_me/*"
     ],
     "background": {
         "service_worker": "background.js"
     },
     "content_scripts": [
         {
-            "matches": ["https://grafana-atome.advai.net/d/spring-boot-jdbc-hikaricp/spring-boot-jdbc-and-hikaricp*"],
+            "matches": ["http://example.com/specific_page.html*"],
             "js": ["content.js"],
             "run_at": "document_idle"
         }
